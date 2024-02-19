@@ -1,0 +1,8 @@
+es/udc/rs/deliveries/model/deliveryservice/exceptions/CustomerWithShipmentsException.class
+es/udc/rs/deliveries/model/shipment/Shipment.class
+es/udc/rs/deliveries/model/deliveryservice/MockDeliveryService.class
+es/udc/rs/deliveries/model/deliveryservice/DeliveryServiceFactory.class
+es/udc/rs/deliveries/model/deliveryservice/DeliveryService.class
+es/udc/rs/deliveries/model/shipment/ShipmentStatus.class
+es/udc/rs/deliveries/model/customer/Customer.class
+es/udc/rs/deliveries/model/deliveryservice/exceptions/InvalidUpdateStatusException.class

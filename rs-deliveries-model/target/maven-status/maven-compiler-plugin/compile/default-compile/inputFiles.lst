@@ -1,0 +1,8 @@
+/home/brais/Descargas/IA-DEFINITIVO/ia-05/rs-deliveries-model/src/main/java/es/udc/rs/deliveries/model/deliveryservice/DeliveryServiceFactory.java
+/home/brais/Descargas/IA-DEFINITIVO/ia-05/rs-deliveries-model/src/main/java/es/udc/rs/deliveries/model/deliveryservice/exceptions/CustomerWithShipmentsException.java
+/home/brais/Descargas/IA-DEFINITIVO/ia-05/rs-deliveries-model/src/main/java/es/udc/rs/deliveries/model/deliveryservice/MockDeliveryService.java
+/home/brais/Descargas/IA-DEFINITIVO/ia-05/rs-deliveries-model/src/main/java/es/udc/rs/deliveries/model/shipment/ShipmentStatus.java
+/home/brais/Descargas/IA-DEFINITIVO/ia-05/rs-deliveries-model/src/main/java/es/udc/rs/deliveries/model/deliveryservice/DeliveryService.java
+/home/brais/Descargas/IA-DEFINITIVO/ia-05/rs-deliveries-model/src/main/java/es/udc/rs/deliveries/model/deliveryservice/exceptions/InvalidUpdateStatusException.java
+/home/brais/Descargas/IA-DEFINITIVO/ia-05/rs-deliveries-model/src/main/java/es/udc/rs/deliveries/model/shipment/Shipment.java
+/home/brais/Descargas/IA-DEFINITIVO/ia-05/rs-deliveries-model/src/main/java/es/udc/rs/deliveries/model/customer/Customer.java
