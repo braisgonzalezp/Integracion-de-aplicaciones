@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por Eclipse Implementation of JAXB v4.0.3 
+Visite https://eclipse-ee4j.github.io/jaxb-ri 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2023.12.09 a las 09:13:44 PM CET
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://www.w3.org/2005/Atom">
+    <schemaBindings map="false">
+      <package name="es.udc.rs.deliveries.client.service.rest.dto"/>
+    </schemaBindings>
+    <bindings scd="~tns:atomLinkType">
+      <class ref="es.udc.rs.deliveries.client.service.rest.dto.AtomLinkType"/>
+    </bindings>
+  </bindings>
+</bindings>
+

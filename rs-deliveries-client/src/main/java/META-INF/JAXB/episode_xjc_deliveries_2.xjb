@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por Eclipse Implementation of JAXB v4.0.3 
+Visite https://eclipse-ee4j.github.io/jaxb-ri 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2023.12.06 a las 11:16:58 AM CET
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://ws.udc.es/deliveries/xml">
+    <schemaBindings map="false">
+      <package name="es.udc.rs.deliveries.client.service.rest.dto"/>
+    </schemaBindings>
+    <bindings scd="~tns:customerType">
+      <class ref="es.udc.rs.deliveries.client.service.rest.dto.CustomerType"/>
+    </bindings>
+    <bindings scd="~tns:customerWithShipmentsExceptionType">
+      <class ref="es.udc.rs.deliveries.client.service.rest.dto.CustomerWithShipmentsExceptionType"/>
+    </bindings>
+    <bindings scd="~tns:inputValidationExceptionType">
+      <class ref="es.udc.rs.deliveries.client.service.rest.dto.InputValidationExceptionType"/>
+    </bindings>
+    <bindings scd="~tns:instanceNotFoundExceptionType">
+      <class ref="es.udc.rs.deliveries.client.service.rest.dto.InstanceNotFoundExceptionType"/>
+    </bindings>
+    <bindings scd="~tns:invalidUpdateStatusExceptionType">
+      <class ref="es.udc.rs.deliveries.client.service.rest.dto.InvalidUpdateStatusExceptionType"/>
+    </bindings>
+    <bindings scd="~tns:shipmentType">
+      <class ref="es.udc.rs.deliveries.client.service.rest.dto.ShipmentType"/>
+    </bindings>
+  </bindings>
+</bindings>
+
