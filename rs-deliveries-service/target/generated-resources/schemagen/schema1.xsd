@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://www.w3.org/2005/Atom" xmlns:tns="http://www.w3.org/2005/Atom" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="link" type="tns:atomLinkType"/>
+
+  <xs:complexType name="atomLinkType">
+    <xs:sequence/>
+    <xs:attribute name="href" type="xs:string" use="required"/>
+    <xs:attribute name="rel" type="xs:string" use="required"/>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+    <xs:attribute name="title" type="xs:string" use="required"/>
+  </xs:complexType>
+</xs:schema>
+
