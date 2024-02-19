@@ -1,0 +1,69 @@
+<!--  Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is JAX-WS RI 3.0.2 git-revision#91dd558.  -->
+<xs:schema xmlns:tns="http://rs.udc.es/delivery" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://rs.udc.es/delivery">
+<xs:element name="DeliveryException" nillable="true" type="tns:deliveryExceptionInfo"/>
+<xs:element name="changeStatus" type="tns:changeStatus"/>
+<xs:element name="changeStatusResponse" type="tns:changeStatusResponse"/>
+<xs:element name="createShipment" type="tns:createShipment"/>
+<xs:element name="createShipmentResponse" type="tns:createShipmentResponse"/>
+<xs:element name="findShipment" type="tns:findShipment"/>
+<xs:element name="findShipmentResponse" type="tns:findShipmentResponse"/>
+<xs:complexType name="changeStatus">
+<xs:sequence>
+<xs:element name="shipmentId" type="xs:long" minOccurs="0"/>
+<xs:element name="shipmentStatus" type="tns:shipmentStatus" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="changeStatusResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:shipment" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="shipment">
+<xs:sequence>
+<xs:element name="address" type="xs:string" minOccurs="0"/>
+<xs:element name="creationDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="customerId" type="xs:string" minOccurs="0"/>
+<xs:element name="deliveryDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="expectedHoursToDeliver" type="xs:int"/>
+<xs:element name="shipmentId" type="xs:long" minOccurs="0"/>
+<xs:element name="shipmentRef" type="xs:string" minOccurs="0"/>
+<xs:element name="shipmentStatus" type="tns:shipmentStatus" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="deliveryExceptionInfo">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="createShipment">
+<xs:sequence>
+<xs:element name="customerId" type="xs:string" minOccurs="0"/>
+<xs:element name="shipmentRef" type="xs:string" minOccurs="0"/>
+<xs:element name="address" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="createShipmentResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:shipment" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="findShipment">
+<xs:sequence>
+<xs:element name="shipmentId" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="findShipmentResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:shipment" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:simpleType name="shipmentStatus">
+<xs:restriction base="xs:string">
+<xs:enumeration value="PENDING"/>
+<xs:enumeration value="SENT"/>
+<xs:enumeration value="DELIVERED"/>
+<xs:enumeration value="REJECTED"/>
+<xs:enumeration value="CANCELLED"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>

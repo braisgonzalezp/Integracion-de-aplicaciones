@@ -1,0 +1,158 @@
+<!--  Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is JAX-WS RI 3.0.2 git-revision#91dd558.  -->
+<xs:schema xmlns:tns="http://soap.ws.udc.es/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://soap.ws.udc.es/">
+    <xs:element name="SoapCustomerWithShipmentsException" nillable="true" type="tns:soapCustomerWithShipmentsExceptionInfo"/>
+    <xs:element name="SoapInputValidationException" nillable="true" type="xs:string"/>
+    <xs:element name="SoapInstanceNotFoundException" nillable="true" type="tns:soapInstanceNotFoundExceptionInfo"/>
+    <xs:element name="SoapInvalidUpdateStatusException" nillable="true" type="tns:soapInvalidUpdateStatusExceptionInfo"/>
+    <xs:element name="addCustomer" type="tns:addCustomer"/>
+    <xs:element name="addCustomerResponse" type="tns:addCustomerResponse"/>
+    <xs:element name="addShipment" type="tns:addShipment"/>
+    <xs:element name="addShipmentResponse" type="tns:addShipmentResponse"/>
+    <xs:element name="cancelShipment" type="tns:cancelShipment"/>
+    <xs:element name="cancelShipmentResponse" type="tns:cancelShipmentResponse"/>
+    <xs:element name="deleteCustomer" type="tns:deleteCustomer"/>
+    <xs:element name="deleteCustomerResponse" type="tns:deleteCustomerResponse"/>
+    <xs:element name="findCustomer" type="tns:findCustomer"/>
+    <xs:element name="findCustomerResponse" type="tns:findCustomerResponse"/>
+    <xs:element name="findCustomers" type="tns:findCustomers"/>
+    <xs:element name="findCustomersResponse" type="tns:findCustomersResponse"/>
+    <xs:element name="findShipment" type="tns:findShipment"/>
+    <xs:element name="findShipmentResponse" type="tns:findShipmentResponse"/>
+    <xs:element name="findShipments" type="tns:findShipments"/>
+    <xs:element name="findShipmentsResponse" type="tns:findShipmentsResponse"/>
+    <xs:element name="updateCustomer" type="tns:updateCustomer"/>
+    <xs:element name="updateCustomerResponse" type="tns:updateCustomerResponse"/>
+    <xs:element name="updateShipment" type="tns:updateShipment"/>
+    <xs:element name="updateShipmentResponse" type="tns:updateShipmentResponse"/>
+    <xs:complexType name="updateShipment">
+        <xs:sequence>
+            <xs:element name="shipmentId" type="xs:long" minOccurs="0"/>
+            <xs:element name="status" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="updateShipmentResponse">
+        <xs:sequence/>
+    </xs:complexType>
+    <xs:complexType name="soapInstanceNotFoundExceptionInfo">
+        <xs:sequence>
+            <xs:element name="message" type="xs:string" form="qualified" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="soapInvalidUpdateStatusExceptionInfo">
+        <xs:sequence>
+            <xs:element name="shipmentId" type="xs:long" form="qualified" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="addCustomer">
+        <xs:sequence>
+            <xs:element name="customerDto" type="tns:soapServiceCustomerDto" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="soapServiceCustomerDto">
+        <xs:sequence>
+            <xs:element name="address" type="xs:string" form="qualified" minOccurs="0"/>
+            <xs:element name="cif" type="xs:string" form="qualified" minOccurs="0"/>
+            <xs:element name="customerId" type="xs:long" form="qualified" minOccurs="0"/>
+            <xs:element name="name" type="xs:string" form="qualified" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="addCustomerResponse">
+        <xs:sequence>
+            <xs:element name="return" type="tns:soapServiceCustomerDto" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="findShipment">
+        <xs:sequence>
+            <xs:element name="shipmentId" type="xs:long" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="findShipmentResponse">
+        <xs:sequence>
+            <xs:element name="return" type="tns:soapServiceShipmentDto" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="soapServiceShipmentDto">
+        <xs:sequence>
+            <xs:element name="address" type="xs:string" form="qualified" minOccurs="0"/>
+            <xs:element name="creationDate" type="xs:string" form="qualified" minOccurs="0"/>
+            <xs:element name="customerId" type="xs:long" form="qualified" minOccurs="0"/>
+            <xs:element name="deliveryDate" type="xs:string" form="qualified" minOccurs="0"/>
+            <xs:element name="estimatedHours" type="xs:int" form="qualified"/>
+            <xs:element name="packageReference" type="xs:long" form="qualified" minOccurs="0"/>
+            <xs:element name="shipmentId" type="xs:long" form="qualified" minOccurs="0"/>
+            <xs:element name="status" type="xs:string" form="qualified" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="findCustomer">
+        <xs:sequence>
+            <xs:element name="customerId" type="xs:long" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="findCustomerResponse">
+        <xs:sequence>
+            <xs:element name="return" type="tns:soapServiceCustomerDto" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="addShipment">
+        <xs:sequence>
+            <xs:element name="shipmentDto" type="tns:soapServiceShipmentDto" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="addShipmentResponse">
+        <xs:sequence>
+            <xs:element name="return" type="tns:soapServiceShipmentDto" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="findShipments">
+        <xs:sequence>
+            <xs:element name="customerId" type="xs:long" minOccurs="0"/>
+            <xs:element name="status" type="xs:string" minOccurs="0"/>
+            <xs:element name="index" type="xs:int"/>
+            <xs:element name="elements" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="findShipmentsResponse">
+        <xs:sequence>
+            <xs:element name="return" type="tns:soapServiceShipmentDto" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="updateCustomer">
+        <xs:sequence>
+            <xs:element name="customerDto" type="tns:soapServiceCustomerDto" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="updateCustomerResponse">
+        <xs:sequence/>
+    </xs:complexType>
+    <xs:complexType name="cancelShipment">
+        <xs:sequence>
+            <xs:element name="shipmentId" type="xs:long" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="cancelShipmentResponse">
+        <xs:sequence/>
+    </xs:complexType>
+    <xs:complexType name="deleteCustomer">
+        <xs:sequence>
+            <xs:element name="customerId" type="xs:long" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="deleteCustomerResponse">
+        <xs:sequence/>
+    </xs:complexType>
+    <xs:complexType name="soapCustomerWithShipmentsExceptionInfo">
+        <xs:sequence>
+            <xs:element name="customerId" type="xs:long" form="qualified" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="findCustomers">
+        <xs:sequence>
+            <xs:element name="keywords" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="findCustomersResponse">
+        <xs:sequence>
+            <xs:element name="return" type="tns:soapServiceCustomerDto" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

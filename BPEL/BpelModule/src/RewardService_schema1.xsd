@@ -1,0 +1,71 @@
+<!--  Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is JAX-WS RI 3.0.2 git-revision#91dd558.  -->
+<xs:schema xmlns:tns="http://rs.udc.es/reward" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://rs.udc.es/reward">
+<xs:element name="RewardException" nillable="true" type="tns:rewardExceptionInfo"/>
+<xs:element name="addMembershipReward" type="tns:addMembershipReward"/>
+<xs:element name="addMembershipRewardResponse" type="tns:addMembershipRewardResponse"/>
+<xs:element name="getMembershipReward" type="tns:getMembershipReward"/>
+<xs:element name="getMembershipRewardResponse" type="tns:getMembershipRewardResponse"/>
+<xs:element name="getProductReward" type="tns:getProductReward"/>
+<xs:element name="getProductRewardResponse" type="tns:getProductRewardResponse"/>
+<xs:element name="isRewardMembership" type="tns:isRewardMembership"/>
+<xs:element name="isRewardMembershipResponse" type="tns:isRewardMembershipResponse"/>
+<xs:element name="removeMembershipReward" type="tns:removeMembershipReward"/>
+<xs:element name="removeMembershipRewardResponse" type="tns:removeMembershipRewardResponse"/>
+<xs:complexType name="isRewardMembership">
+<xs:sequence>
+<xs:element name="customerId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="isRewardMembershipResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="rewardExceptionInfo">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getProductReward">
+<xs:sequence>
+<xs:element name="productId" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getProductRewardResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="removeMembershipReward">
+<xs:sequence>
+<xs:element name="customerId" type="xs:string" minOccurs="0"/>
+<xs:element name="rewardPoints" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="removeMembershipRewardResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="addMembershipReward">
+<xs:sequence>
+<xs:element name="customerId" type="xs:string" minOccurs="0"/>
+<xs:element name="rewardPoints" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="addMembershipRewardResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getMembershipReward">
+<xs:sequence>
+<xs:element name="customerId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getMembershipRewardResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

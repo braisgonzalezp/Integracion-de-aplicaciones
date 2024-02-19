@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns0="http://enterprise.netbeans.org/bpel/BpelModule/bpelModule" xmlns:ns1="http://rs.udc.es/crm" xmlns:ns2="http://rs.udc.es/reward" xmlns:ns3="http://rs.udc.es/delivery" xmlns:ns4="http://j2ee.netbeans.org/wsdl/BpelModule/src/BusinessClient" xmlns:ns5="http://j2ee.netbeans.org/wsdl/BpelModule/src/ShipmentConfirmClient" xmlns:ns6="http://j2ee.netbeans.org/wsdl/BpelModule/src/DeliveredConfirmationStatus" xmlns:ns7="http://www.sun.com/jbi/descriptor/service-unit" version="1.0">
+    <services binding-component="false">
+        <provides endpoint-name="BusinessClientPortTypeRole_myRole" interface-name="ns4:BusinessClientPortType" service-name="ns0:PartnerLinkBusinessClient">
+            <ns7:display-name>PartnerLinkBusinessClient</ns7:display-name>
+            <ns7:process-name>bpelModule</ns7:process-name>
+            <ns7:file-path>bpelModule.bpel</ns7:file-path>
+        </provides>
+        <provides endpoint-name="ShipmentConfirmClientPortTypeRole_myRole" interface-name="ns5:ShipmentConfirmClientPortType" service-name="ns0:PartnerLinkShipmentConfirm">
+            <ns7:display-name>PartnerLinkShipmentConfirm</ns7:display-name>
+            <ns7:process-name>bpelModule</ns7:process-name>
+            <ns7:file-path>bpelModule.bpel</ns7:file-path>
+        </provides>
+        <provides endpoint-name="DeliveredConfirmationStatusPortTypeRole_myRole" interface-name="ns6:DeliveredConfirmationStatusPortType" service-name="ns0:PartnerLinkDeliveredConfirmation">
+            <ns7:display-name>PartnerLinkDeliveredConfirmation</ns7:display-name>
+            <ns7:process-name>bpelModule</ns7:process-name>
+            <ns7:file-path>bpelModule.bpel</ns7:file-path>
+        </provides>
+        <consumes endpoint-name="CrmProviderRole_partnerRole" interface-name="ns1:CrmProvider" service-name="ns0:PartnerCrm">
+            <ns7:display-name>PartnerCrm</ns7:display-name>
+            <ns7:process-name>bpelModule</ns7:process-name>
+            <ns7:file-path>bpelModule.bpel</ns7:file-path>
+        </consumes>
+        <consumes endpoint-name="RewardProviderRole_partnerRole" interface-name="ns2:RewardProvider" service-name="ns0:PartnerReward">
+            <ns7:display-name>PartnerReward</ns7:display-name>
+            <ns7:process-name>bpelModule</ns7:process-name>
+            <ns7:file-path>bpelModule.bpel</ns7:file-path>
+        </consumes>
+        <consumes endpoint-name="DeliveryProviderRole_partnerRole" interface-name="ns3:DeliveryProvider" service-name="ns0:PartnerDelivery">
+            <ns7:display-name>PartnerDelivery</ns7:display-name>
+            <ns7:process-name>bpelModule</ns7:process-name>
+            <ns7:file-path>bpelModule.bpel</ns7:file-path>
+        </consumes>
+    </services>
+</jbi>
