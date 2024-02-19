@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="a5f5fe5e-0c52-4c53-8ab1-f714feb77660" activeEnvironment="Default" name="Practica" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="dc305f60-94f1-42a3-ab93-7f9942f7d06b" wsaVersion="NONE" name="casaBinding1" type="wsdl" bindingName="{CompositeApp1}casaBinding1" soapVersion="1_1" anonymous="optional" definition="http://localhost:5050/CompositeApp1/BusinessClient?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:7070/rs-deliveries-wscontrib/services/CrmService</con:endpoint></con:endpoints><con:operation id="c4f75feb-ca45-49fd-a29f-4fb3b647145e" isOneWay="false" action="" name="getOrder" bindingOperationName="getOrder" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0ab44c0a-a140-432b-8709-c72a8634e691" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7070/rs-deliveries-wscontrib/services/CrmService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:crm="http://rs.udc.es/crm">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <crm:getOrder>
+         <!--Optional:-->
+         <orderId>?</orderId>
+      </crm:getOrder>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://rs.udc.es/crm/CrmProvider/getOrderRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="20710734-a477-4490-b385-69f652753712" wsaVersion="NONE" name="casaBinding3" type="wsdl" bindingName="{CompositeApp1}casaBinding3" soapVersion="1_1" anonymous="optional" definition="http://localhost:5050/CompositeApp1/BusinessClient?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT"/><con:endpoints><con:endpoint>http://localhost:7070/rs-deliveries-wscontrib/services/DeliveryService</con:endpoint></con:endpoints><con:operation id="a2708984-101d-4054-a63a-aeffedb668f5" isOneWay="false" action="" name="changeStatus" bindingOperationName="changeStatus" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="886ef4fa-2100-4cbc-8de5-234ab7988178" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7070/rs-deliveries-wscontrib/services/DeliveryService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:del="http://rs.udc.es/delivery">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <del:changeStatus>
+         <!--Optional:-->
+         <shipmentId>1</shipmentId>
+         <!--Optional:-->
+         <shipmentStatus>DELIVERED</shipmentStatus>
+      </del:changeStatus>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://rs.udc.es/delivery/DeliveryProvider/changeStatusRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call id="1e97d06e-b906-4e05-bc45-fd34a75e1851" name="Request 3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7070/rs-deliveries-wscontrib/services/DeliveryService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:del="http://rs.udc.es/delivery">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <del:changeStatus>
+         <!--Optional:-->
+         <shipmentId>2</shipmentId>
+         <!--Optional:-->
+         <shipmentStatus>DELIVERED</shipmentStatus>
+      </del:changeStatus>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://rs.udc.es/delivery/DeliveryProvider/changeStatusRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call id="9405b210-31f1-4ba3-97e2-f5488b723001" name="Request 4"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7070/rs-deliveries-wscontrib/services/DeliveryService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:del="http://rs.udc.es/delivery">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <del:changeStatus>
+         <!--Optional:-->
+         <shipmentId>3</shipmentId>
+         <!--Optional:-->
+         <shipmentStatus>REJECTED</shipmentStatus>
+      </del:changeStatus>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://rs.udc.es/delivery/DeliveryProvider/changeStatusRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call id="69e47728-5665-4b37-863e-6a3408a95cbd" name="Request 5"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7070/rs-deliveries-wscontrib/services/DeliveryService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:del="http://rs.udc.es/delivery">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <del:changeStatus>
+         <!--Optional:-->
+         <shipmentId>4</shipmentId>
+         <!--Optional:-->
+         <shipmentStatus>REJECTED</shipmentStatus>
+      </del:changeStatus>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://rs.udc.es/delivery/DeliveryProvider/changeStatusRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="07f66cf2-0b11-4b01-a3c9-03568c46e468" isOneWay="false" action="" name="createShipment" bindingOperationName="createShipment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b5ec2e8f-063c-4959-bb95-b0d5b4decba0" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7070/rs-deliveries-wscontrib/services/DeliveryService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:del="http://rs.udc.es/delivery">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <del:createShipment>
+         <!--Optional:-->
+         <customerId>?</customerId>
+         <!--Optional:-->
+         <shipmentRef>?</shipmentRef>
+         <!--Optional:-->
+         <address>?</address>
+      </del:createShipment>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://rs.udc.es/delivery/DeliveryProvider/createShipmentRequest"/></con:call></con:operation><con:operation id="084c57d0-a6ac-48f2-85df-71ebe04b673b" isOneWay="false" action="" name="findShipment" bindingOperationName="findShipment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6403d860-add1-4fef-bf3d-5dd9258fa029" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7070/rs-deliveries-wscontrib/services/DeliveryService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:del="http://rs.udc.es/delivery">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <del:findShipment>
+         <!--Optional:-->
+         <shipmentId>?</shipmentId>
+      </del:findShipment>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://rs.udc.es/delivery/DeliveryProvider/findShipmentRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="0450f67b-c788-45ac-84df-4b05ff4bf642" wsaVersion="NONE" name="casaBinding2" type="wsdl" bindingName="{CompositeApp1}casaBinding2" soapVersion="1_1" anonymous="optional" definition="http://localhost:5050/CompositeApp1/BusinessClient?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:7070/rs-deliveries-wscontrib/services/RewardService</con:endpoint></con:endpoints><con:operation id="1ab157c4-8eaf-4f36-ba04-68709345c343" isOneWay="false" action="" name="addMembershipReward" bindingOperationName="addMembershipReward" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="721116db-ea22-4133-a3ee-948e75670584" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7070/rs-deliveries-wscontrib/services/RewardService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rew="http://rs.udc.es/reward">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <rew:addMembershipReward>
+         <!--Optional:-->
+         <customerId>?</customerId>
+         <!--Optional:-->
+         <rewardPoints>?</rewardPoints>
+      </rew:addMembershipReward>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://rs.udc.es/reward/RewardProvider/addMembershipRewardRequest"/></con:call></con:operation><con:operation id="b4c888bc-0d39-4b92-9de5-564638de0279" isOneWay="false" action="" name="getMembershipReward" bindingOperationName="getMembershipReward" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ea75e4ae-b998-43d2-bcef-f81255ecc8d6" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7070/rs-deliveries-wscontrib/services/RewardService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rew="http://rs.udc.es/reward">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <rew:getMembershipReward>
+         <!--Optional:-->
+         <customerId>11838555H</customerId>
+      </rew:getMembershipReward>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://rs.udc.es/reward/RewardProvider/getMembershipRewardRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call id="fc3b4233-9f3b-46ac-aad1-13e16c951cf7" name="Request 3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7070/rs-deliveries-wscontrib/services/RewardService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rew="http://rs.udc.es/reward">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <rew:getMembershipReward>
+         <!--Optional:-->
+         <customerId>08724415D</customerId>
+      </rew:getMembershipReward>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://rs.udc.es/reward/RewardProvider/getMembershipRewardRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call id="9993c4c4-76a7-4eea-9850-ad25f1b73e19" name="Request 5"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7070/rs-deliveries-wscontrib/services/RewardService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rew="http://rs.udc.es/reward">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <rew:getMembershipReward>
+         <!--Optional:-->
+         <customerId>11838555H</customerId>
+      </rew:getMembershipReward>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://rs.udc.es/reward/RewardProvider/getMembershipRewardRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call id="363e437e-87a1-4fd5-979f-46fe0c5cd3b3" name="Request 4"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7070/rs-deliveries-wscontrib/services/RewardService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rew="http://rs.udc.es/reward">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <rew:getMembershipReward>
+         <!--Optional:-->
+         <customerId>81191750W</customerId>
+      </rew:getMembershipReward>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://rs.udc.es/reward/RewardProvider/getMembershipRewardRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="d491140b-1ca0-4629-bc5a-b3d6a4019036" isOneWay="false" action="" name="getProductReward" bindingOperationName="getProductReward" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="550c20c3-c40d-4ccf-974c-2609ba8f39b6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7070/rs-deliveries-wscontrib/services/RewardService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rew="http://rs.udc.es/reward">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <rew:getProductReward>
+         <!--Optional:-->
+         <productId>?</productId>
+      </rew:getProductReward>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://rs.udc.es/reward/RewardProvider/getProductRewardRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="4dee1441-7c33-41fd-bd54-8a074a4cdebc" isOneWay="false" action="" name="isRewardMembership" bindingOperationName="isRewardMembership" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2532168e-bb06-41cc-885e-a72fc5fd1d7e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7070/rs-deliveries-wscontrib/services/RewardService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rew="http://rs.udc.es/reward">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <rew:isRewardMembership>
+         <!--Optional:-->
+         <customerId>?</customerId>
+      </rew:isRewardMembership>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://rs.udc.es/reward/RewardProvider/isRewardMembershipRequest"/></con:call></con:operation><con:operation id="481d707c-fcbb-42ff-8a91-20967daa8c1b" isOneWay="false" action="" name="removeMembershipReward" bindingOperationName="removeMembershipReward" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3538a313-dbfe-4974-9d09-f4e9a2ff7260" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7070/rs-deliveries-wscontrib/services/RewardService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rew="http://rs.udc.es/reward">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <rew:removeMembershipReward>
+         <!--Optional:-->
+         <customerId>?</customerId>
+         <!--Optional:-->
+         <rewardPoints>?</rewardPoints>
+      </rew:removeMembershipReward>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://rs.udc.es/reward/RewardProvider/removeMembershipRewardRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="a73c07a2-1e43-4fcc-a1c0-cb5b692087af" wsaVersion="NONE" name="casaBinding5" type="wsdl" bindingName="{CompositeApp1}casaBinding5" soapVersion="1_1" anonymous="optional" definition="http://localhost:5050/CompositeApp1/BusinessClient?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:5050/CompositeApp1/ShipmentConfirmClient</con:endpoint></con:endpoints><con:operation id="426f49b7-4693-4f8d-946d-b3d64ba4f80c" isOneWay="false" action="" name="ShipmentConfirmClientOperation" bindingOperationName="ShipmentConfirmClientOperation" type="One-Way" inputName="input1" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="932451a3-2187-4596-8538-82691ade6497" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5050/CompositeApp1/ShipmentConfirmClient</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:com="CompositeApp1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <com:ShipmentConfirmClientOperation>
+         <estimatedHours>4</estimatedHours>
+         <shipmentId>1</shipmentId>
+      </com:ShipmentConfirmClientOperation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="CompositeApp1/ShipmentConfirmClientPortType/input1"/><con:wsrmConfig version="1.2"/></con:call><con:call id="b9251dc4-29b7-4b57-bcc9-add6782e9420" name="Request 3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5050/CompositeApp1/ShipmentConfirmClient</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:com="CompositeApp1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <com:ShipmentConfirmClientOperation>
+         <estimatedHours>2</estimatedHours>
+         <shipmentId>4</shipmentId>
+      </com:ShipmentConfirmClientOperation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="CompositeApp1/ShipmentConfirmClientPortType/input1"/><con:wsrmConfig version="1.2"/></con:call><con:call id="4c0cf65b-4d7f-4107-b9b4-39d2da45313c" name="Request 4"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5050/CompositeApp1/ShipmentConfirmClient</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:com="CompositeApp1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <com:ShipmentConfirmClientOperation>
+         <estimatedHours>2</estimatedHours>
+         <shipmentId>5</shipmentId>
+      </com:ShipmentConfirmClientOperation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="CompositeApp1/ShipmentConfirmClientPortType/input1"/><con:wsrmConfig version="1.2"/></con:call><con:call id="f4537696-0a0f-4f1a-b40b-b5d4603c87e8" name="Request 5"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5050/CompositeApp1/ShipmentConfirmClient</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:com="CompositeApp1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <com:ShipmentConfirmClientOperation>
+         <estimatedHours>4</estimatedHours>
+         <shipmentId>4</shipmentId>
+      </com:ShipmentConfirmClientOperation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="CompositeApp1/ShipmentConfirmClientPortType/input1"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="0788a6c2-ea1f-4ec2-8c3f-ce0c86ce7276" wsaVersion="NONE" name="casaBinding4" type="wsdl" bindingName="{CompositeApp1}casaBinding4" soapVersion="1_1" anonymous="optional" definition="http://localhost:5050/CompositeApp1/BusinessClient?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:5050/CompositeApp1/BusinessClient</con:endpoint></con:endpoints><con:operation id="83c958cf-c4db-4024-a07e-db209d7e2e74" isOneWay="false" action="" name="BusinessClientOperation" bindingOperationName="BusinessClientOperation" type="Request-Response" outputName="output1" inputName="input1" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5077fb2e-e247-4989-aa0d-c4258bbe50f1" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5050/CompositeApp1/BusinessClient</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:com="CompositeApp1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <com:BusinessClientOperation>
+         <customerId>11838555H</customerId>
+         <orderId>1</orderId>
+      </com:BusinessClientOperation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="CompositeApp1/BusinessClientPortType/input1"/><con:wsrmConfig version="1.2"/></con:call><con:call id="853c328b-1342-4b93-a49d-4f282f5d93d3" name="Request 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5050/CompositeApp1/BusinessClient</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:com="CompositeApp1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <com:BusinessClientOperation>
+         <customerId>11838555H</customerId>
+         <orderId>4</orderId>
+      </com:BusinessClientOperation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="CompositeApp1/BusinessClientPortType/input1"/><con:wsrmConfig version="1.2"/></con:call><con:call id="b739baac-06e7-4c61-a383-ced5878e17fe" name="Request 3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5050/CompositeApp1/BusinessClient</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:com="CompositeApp1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <com:BusinessClientOperation>
+         <customerId>08724415D</customerId>
+         <orderId>4</orderId>
+      </com:BusinessClientOperation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="CompositeApp1/BusinessClientPortType/input1"/><con:wsrmConfig version="1.2"/></con:call><con:call id="d1fc3845-0493-4d90-8b11-ec5f871e32fd" name="Request 4"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5050/CompositeApp1/BusinessClient</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:com="CompositeApp1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <com:BusinessClientOperation>
+         <customerId>81191750W</customerId>
+         <orderId>5</orderId>
+      </com:BusinessClientOperation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="CompositeApp1/BusinessClientPortType/input1"/><con:wsrmConfig version="1.2"/></con:call><con:call id="4126ca01-c274-4aae-93a1-145af6741f50" name="Request 5"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5050/CompositeApp1/BusinessClient</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:com="CompositeApp1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <com:BusinessClientOperation>
+         <customerId>11838555H</customerId>
+         <orderId>1</orderId>
+      </com:BusinessClientOperation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="CompositeApp1/BusinessClientPortType/input1"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="278bb2a2-ae2f-41d7-bd17-743700c5145c" wsaVersion="NONE" name="casaBinding6" type="wsdl" bindingName="{CompositeApp1}casaBinding6" soapVersion="1_1" anonymous="optional" definition="http://localhost:5050/CompositeApp1/BusinessClient?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:5050/CompositeApp1/BusinessClient?wsdl"><con:part><con:url>http://localhost:5050/CompositeApp1/BusinessClient?wsdl</con:url><con:content><![CDATA[<definitions targetNamespace="CompositeApp1" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns5="http://j2ee.netbeans.org/wsdl/BpelModule/src/DeliveredConfirmationStatus" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://rs.udc.es/crm" xmlns:tns="CompositeApp1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://rs.udc.es/delivery" xmlns:ns1="http://rs.udc.es/reward" xmlns:ns4="http://j2ee.netbeans.org/wsdl/BpelModule/src/ShipmentConfirmClient" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns3="http://j2ee.netbeans.org/wsdl/BpelModule/src/BusinessClient">
+  <import namespace="http://rs.udc.es/reward" location="http://localhost:5050/CompositeApp1-sun-http-binding/BpelModule/RewardService.wsdl"></import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/BpelModule/src/DeliveredConfirmationStatus" location="http://localhost:5050/CompositeApp1-sun-http-binding/BpelModule/DeliveredConfirmationStatus.wsdl"></import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/BpelModule/src/ShipmentConfirmClient" location="http://localhost:5050/CompositeApp1-sun-http-binding/BpelModule/ShipmentConfirmClient.wsdl"></import>
+  <import namespace="http://rs.udc.es/crm" location="http://localhost:5050/CompositeApp1-sun-http-binding/BpelModule/CrmService.wsdl"></import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/BpelModule/src/BusinessClient" location="http://localhost:5050/CompositeApp1-sun-http-binding/BpelModule/BusinessClient.wsdl"></import>
+  <import namespace="http://rs.udc.es/delivery" location="http://localhost:5050/CompositeApp1-sun-http-binding/BpelModule/DeliveryService.wsdl"></import>
+  <portType name="dummyCasaPortType"></portType>
+  <binding name="casaBinding1" type="ns:CrmProvider">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getOrder">
+      <soap:operation/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="CrmException">
+        <soap:fault name="CrmException" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <binding name="casaBinding2" type="ns1:RewardProvider">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="isRewardMembership">
+      <soap:operation/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="RewardException">
+        <soap:fault name="RewardException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="getProductReward">
+      <soap:operation/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="RewardException">
+        <soap:fault name="RewardException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="addMembershipReward">
+      <soap:operation/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="RewardException">
+        <soap:fault name="RewardException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="removeMembershipReward">
+      <soap:operation/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="RewardException">
+        <soap:fault name="RewardException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="getMembershipReward">
+      <soap:operation/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="RewardException">
+        <soap:fault name="RewardException" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <binding name="casaBinding3" type="ns2:DeliveryProvider">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="createShipment">
+      <soap:operation/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeliveryException">
+        <soap:fault name="DeliveryException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="findShipment">
+      <soap:operation/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeliveryException">
+        <soap:fault name="DeliveryException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="changeStatus">
+      <soap:operation/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="DeliveryException">
+        <soap:fault name="DeliveryException" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <binding name="casaBinding4" type="ns3:BusinessClientPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="BusinessClientOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="CompositeApp1"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="CompositeApp1"/>
+      </output>
+      <fault name="fault1">
+        <soap:fault name="fault1" use="literal" namespace="CompositeApp1"/>
+      </fault>
+    </operation>
+  </binding>
+  <binding name="casaBinding5" type="ns4:ShipmentConfirmClientPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="ShipmentConfirmClientOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="CompositeApp1"/>
+      </input>
+    </operation>
+  </binding>
+  <binding name="casaBinding6" type="ns5:DeliveredConfirmationStatusPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="DeliveredConfirmationStatusOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="CompositeApp1"/>
+      </input>
+    </operation>
+  </binding>
+  <service name="CompositeApp1Service1">
+    <port name="CrmProvider" binding="tns:casaBinding1">
+      <soap:address location="http://localhost:7070/rs-deliveries-wscontrib/services/CrmService"/>
+    </port>
+  </service>
+  <service name="CompositeApp1Service3">
+    <port name="DeliveryProvider" binding="tns:casaBinding3">
+      <soap:address location="http://localhost:7070/rs-deliveries-wscontrib/services/DeliveryService"/>
+    </port>
+  </service>
+  <service name="CompositeApp1Service2">
+    <port name="RewardProvider" binding="tns:casaBinding2">
+      <soap:address location="http://localhost:7070/rs-deliveries-wscontrib/services/RewardService"/>
+    </port>
+  </service>
+  <service name="CompositeApp1Service5">
+    <port name="ShipmentConfirm" binding="tns:casaBinding5">
+      <soap:address location="http://localhost:5050/CompositeApp1/ShipmentConfirmClient"/>
+    </port>
+  </service>
+  <service name="CompositeApp1Service4">
+    <port name="BusinessClient" binding="tns:casaBinding4">
+      <soap:address location="http://localhost:5050/CompositeApp1/BusinessClient"/>
+    </port>
+  </service>
+  <service name="CompositeApp1Service6">
+    <port name="DeliveredConfirmation" binding="tns:casaBinding6">
+      <soap:address location="http://localhost:5050/CompositeApp1/DeliveredConfirmationStatus"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:5050/CompositeApp1-sun-http-binding/BpelModule/RewardService.wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is JAX-WS RI 3.0.2 git-revision#91dd558.-->
+<!--Generated by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is JAX-WS RI 3.0.2 git-revision#91dd558.-->
+<definitions targetNamespace="http://rs.udc.es/reward" name="RewardProviderService" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://rs.udc.es/reward" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://rs.udc.es/reward" schemaLocation="RewardService_schema1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="isRewardMembership">
+    <part name="parameters" element="tns:isRewardMembership"/>
+  </message>
+  <message name="isRewardMembershipResponse">
+    <part name="parameters" element="tns:isRewardMembershipResponse"/>
+  </message>
+  <message name="RewardException">
+    <part name="fault" element="tns:RewardException"/>
+  </message>
+  <message name="getProductReward">
+    <part name="parameters" element="tns:getProductReward"/>
+  </message>
+  <message name="getProductRewardResponse">
+    <part name="parameters" element="tns:getProductRewardResponse"/>
+  </message>
+  <message name="addMembershipReward">
+    <part name="parameters" element="tns:addMembershipReward"/>
+  </message>
+  <message name="addMembershipRewardResponse">
+    <part name="parameters" element="tns:addMembershipRewardResponse"/>
+  </message>
+  <message name="removeMembershipReward">
+    <part name="parameters" element="tns:removeMembershipReward"/>
+  </message>
+  <message name="removeMembershipRewardResponse">
+    <part name="parameters" element="tns:removeMembershipRewardResponse"/>
+  </message>
+  <message name="getMembershipReward">
+    <part name="parameters" element="tns:getMembershipReward"/>
+  </message>
+  <message name="getMembershipRewardResponse">
+    <part name="parameters" element="tns:getMembershipRewardResponse"/>
+  </message>
+  <portType name="RewardProvider">
+    <operation name="isRewardMembership">
+      <input wsam:Action="http://rs.udc.es/reward/RewardProvider/isRewardMembershipRequest" message="tns:isRewardMembership"/>
+      <output wsam:Action="http://rs.udc.es/reward/RewardProvider/isRewardMembershipResponse" message="tns:isRewardMembershipResponse"/>
+      <fault message="tns:RewardException" name="RewardException" wsam:Action="http://rs.udc.es/reward/RewardProvider/isRewardMembership/Fault/RewardException"/>
+    </operation>
+    <operation name="getProductReward">
+      <input wsam:Action="http://rs.udc.es/reward/RewardProvider/getProductRewardRequest" message="tns:getProductReward"/>
+      <output wsam:Action="http://rs.udc.es/reward/RewardProvider/getProductRewardResponse" message="tns:getProductRewardResponse"/>
+      <fault message="tns:RewardException" name="RewardException" wsam:Action="http://rs.udc.es/reward/RewardProvider/getProductReward/Fault/RewardException"/>
+    </operation>
+    <operation name="addMembershipReward">
+      <input wsam:Action="http://rs.udc.es/reward/RewardProvider/addMembershipRewardRequest" message="tns:addMembershipReward"/>
+      <output wsam:Action="http://rs.udc.es/reward/RewardProvider/addMembershipRewardResponse" message="tns:addMembershipRewardResponse"/>
+      <fault message="tns:RewardException" name="RewardException" wsam:Action="http://rs.udc.es/reward/RewardProvider/addMembershipReward/Fault/RewardException"/>
+    </operation>
+    <operation name="removeMembershipReward">
+      <input wsam:Action="http://rs.udc.es/reward/RewardProvider/removeMembershipRewardRequest" message="tns:removeMembershipReward"/>
+      <output wsam:Action="http://rs.udc.es/reward/RewardProvider/removeMembershipRewardResponse" message="tns:removeMembershipRewardResponse"/>
+      <fault message="tns:RewardException" name="RewardException" wsam:Action="http://rs.udc.es/reward/RewardProvider/removeMembershipReward/Fault/RewardException"/>
+    </operation>
+    <operation name="getMembershipReward">
+      <input wsam:Action="http://rs.udc.es/reward/RewardProvider/getMembershipRewardRequest" message="tns:getMembershipReward"/>
+      <output wsam:Action="http://rs.udc.es/reward/RewardProvider/getMembershipRewardResponse" message="tns:getMembershipRewardResponse"/>
+      <fault message="tns:RewardException" name="RewardException" wsam:Action="http://rs.udc.es/reward/RewardProvider/getMembershipReward/Fault/RewardException"/>
+    </operation>
+  </portType>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:5050/CompositeApp1-sun-http-binding/BpelModule/RewardService_schema1.xsd</con:url><con:content><![CDATA[<!--Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is JAX-WS RI 3.0.2 git-revision#91dd558.-->
+<xs:schema version="1.0" targetNamespace="http://rs.udc.es/reward" xmlns:tns="http://rs.udc.es/reward" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="RewardException" nillable="true" type="tns:rewardExceptionInfo"/>
+  <xs:element name="addMembershipReward" type="tns:addMembershipReward"/>
+  <xs:element name="addMembershipRewardResponse" type="tns:addMembershipRewardResponse"/>
+  <xs:element name="getMembershipReward" type="tns:getMembershipReward"/>
+  <xs:element name="getMembershipRewardResponse" type="tns:getMembershipRewardResponse"/>
+  <xs:element name="getProductReward" type="tns:getProductReward"/>
+  <xs:element name="getProductRewardResponse" type="tns:getProductRewardResponse"/>
+  <xs:element name="isRewardMembership" type="tns:isRewardMembership"/>
+  <xs:element name="isRewardMembershipResponse" type="tns:isRewardMembershipResponse"/>
+  <xs:element name="removeMembershipReward" type="tns:removeMembershipReward"/>
+  <xs:element name="removeMembershipRewardResponse" type="tns:removeMembershipRewardResponse"/>
+  <xs:complexType name="isRewardMembership">
+    <xs:sequence>
+      <xs:element name="customerId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="isRewardMembershipResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rewardExceptionInfo">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProductReward">
+    <xs:sequence>
+      <xs:element name="productId" type="xs:long" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProductRewardResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeMembershipReward">
+    <xs:sequence>
+      <xs:element name="customerId" type="xs:string" minOccurs="0"/>
+      <xs:element name="rewardPoints" type="xs:long" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeMembershipRewardResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:long" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addMembershipReward">
+    <xs:sequence>
+      <xs:element name="customerId" type="xs:string" minOccurs="0"/>
+      <xs:element name="rewardPoints" type="xs:long" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addMembershipRewardResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:long" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getMembershipReward">
+    <xs:sequence>
+      <xs:element name="customerId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getMembershipRewardResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:long" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:5050/CompositeApp1-sun-http-binding/BpelModule/DeliveredConfirmationStatus.wsdl</con:url><con:content><![CDATA[<definitions name="DeliveredConfirmationStatus" targetNamespace="http://j2ee.netbeans.org/wsdl/BpelModule/src/DeliveredConfirmationStatus" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/BpelModule/src/DeliveredConfirmationStatus" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype">
+  <types/>
+  <message name="DeliveredConfirmationStatusOperationRequest">
+    <part name="timeUsed" type="xsd:int"/>
+    <part name="shipmentId" type="xsd:long"/>
+  </message>
+  <portType name="DeliveredConfirmationStatusPortType">
+    <operation name="DeliveredConfirmationStatusOperation">
+      <input name="input1" message="tns:DeliveredConfirmationStatusOperationRequest"/>
+    </operation>
+  </portType>
+  <plnk:partnerLinkType name="DeliveredConfirmationStatus">
+    <!--A partner link type is automatically generated when a new port type is added. Partner link types are used by BPEL processes. 
+In a BPEL process, a partner link represents the interaction between the BPEL process and a partner service. Each partner link is associated with a partner link type.
+A partner link type characterizes the conversational relationship between two services. The partner link type can have one or two roles.-->
+    <plnk:role name="DeliveredConfirmationStatusPortTypeRole" portType="tns:DeliveredConfirmationStatusPortType"/>
+  </plnk:partnerLinkType>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:5050/CompositeApp1-sun-http-binding/BpelModule/ShipmentConfirmClient.wsdl</con:url><con:content><![CDATA[<definitions name="ShipmentConfirmClient" targetNamespace="http://j2ee.netbeans.org/wsdl/BpelModule/src/ShipmentConfirmClient" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/BpelModule/src/ShipmentConfirmClient" xmlns:ns="http://rs.udc.es/delivery" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype">
+  <types>
+    <xsd:schema targetNamespace="http://j2ee.netbeans.org/wsdl/BpelModule/src/ShipmentConfirmClient">
+      <xsd:import namespace="http://rs.udc.es/delivery" schemaLocation="DeliveryService_schema1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="ShipmentConfirmClientOperationRequest">
+    <part name="estimatedHours" type="xsd:int"/>
+    <part name="shipmentId" type="xsd:long"/>
+  </message>
+  <portType name="ShipmentConfirmClientPortType">
+    <operation name="ShipmentConfirmClientOperation">
+      <input name="input1" message="tns:ShipmentConfirmClientOperationRequest"/>
+    </operation>
+  </portType>
+  <plnk:partnerLinkType name="ShipmentConfirmClient">
+    <!--A partner link type is automatically generated when a new port type is added. Partner link types are used by BPEL processes. 
+In a BPEL process, a partner link represents the interaction between the BPEL process and a partner service. Each partner link is associated with a partner link type.
+A partner link type characterizes the conversational relationship between two services. The partner link type can have one or two roles.-->
+    <plnk:role name="ShipmentConfirmClientPortTypeRole" portType="tns:ShipmentConfirmClientPortType"/>
+  </plnk:partnerLinkType>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:5050/CompositeApp1-sun-http-binding/BpelModule/DeliveryService_schema1.xsd</con:url><con:content><![CDATA[<!--Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is JAX-WS RI 3.0.2 git-revision#91dd558.-->
+<xs:schema version="1.0" targetNamespace="http://rs.udc.es/delivery" xmlns:tns="http://rs.udc.es/delivery" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DeliveryException" nillable="true" type="tns:deliveryExceptionInfo"/>
+  <xs:element name="changeStatus" type="tns:changeStatus"/>
+  <xs:element name="changeStatusResponse" type="tns:changeStatusResponse"/>
+  <xs:element name="createShipment" type="tns:createShipment"/>
+  <xs:element name="createShipmentResponse" type="tns:createShipmentResponse"/>
+  <xs:element name="findShipment" type="tns:findShipment"/>
+  <xs:element name="findShipmentResponse" type="tns:findShipmentResponse"/>
+  <xs:complexType name="changeStatus">
+    <xs:sequence>
+      <xs:element name="shipmentId" type="xs:long" minOccurs="0"/>
+      <xs:element name="shipmentStatus" type="tns:shipmentStatus" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="changeStatusResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:shipment" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="shipment">
+    <xs:sequence>
+      <xs:element name="address" type="xs:string" minOccurs="0"/>
+      <xs:element name="creationDate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="customerId" type="xs:string" minOccurs="0"/>
+      <xs:element name="deliveryDate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="expectedHoursToDeliver" type="xs:int"/>
+      <xs:element name="shipmentId" type="xs:long" minOccurs="0"/>
+      <xs:element name="shipmentRef" type="xs:string" minOccurs="0"/>
+      <xs:element name="shipmentStatus" type="tns:shipmentStatus" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deliveryExceptionInfo">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createShipment">
+    <xs:sequence>
+      <xs:element name="customerId" type="xs:string" minOccurs="0"/>
+      <xs:element name="shipmentRef" type="xs:string" minOccurs="0"/>
+      <xs:element name="address" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createShipmentResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:shipment" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findShipment">
+    <xs:sequence>
+      <xs:element name="shipmentId" type="xs:long" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findShipmentResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:shipment" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="shipmentStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PENDING"/>
+      <xs:enumeration value="SENT"/>
+      <xs:enumeration value="DELIVERED"/>
+      <xs:enumeration value="REJECTED"/>
+      <xs:enumeration value="CANCELLED"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:5050/CompositeApp1-sun-http-binding/BpelModule/CrmService.wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is JAX-WS RI 3.0.2 git-revision#91dd558.-->
+<!--Generated by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is JAX-WS RI 3.0.2 git-revision#91dd558.-->
+<definitions targetNamespace="http://rs.udc.es/crm" name="CrmProviderService" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://rs.udc.es/crm" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://rs.udc.es/crm" schemaLocation="CrmService_schema1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="getOrder">
+    <part name="parameters" element="tns:getOrder"/>
+  </message>
+  <message name="getOrderResponse">
+    <part name="parameters" element="tns:getOrderResponse"/>
+  </message>
+  <message name="CrmException">
+    <part name="fault" element="tns:CrmException"/>
+  </message>
+  <portType name="CrmProvider">
+    <operation name="getOrder">
+      <input wsam:Action="http://rs.udc.es/crm/CrmProvider/getOrderRequest" message="tns:getOrder"/>
+      <output wsam:Action="http://rs.udc.es/crm/CrmProvider/getOrderResponse" message="tns:getOrderResponse"/>
+      <fault message="tns:CrmException" name="CrmException" wsam:Action="http://rs.udc.es/crm/CrmProvider/getOrder/Fault/CrmException"/>
+    </operation>
+  </portType>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:5050/CompositeApp1-sun-http-binding/BpelModule/CrmService_schema1.xsd</con:url><con:content><![CDATA[<!--Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is JAX-WS RI 3.0.2 git-revision#91dd558.-->
+<xs:schema version="1.0" targetNamespace="http://rs.udc.es/crm" xmlns:tns="http://rs.udc.es/crm" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CrmException" nillable="true" type="tns:crmExceptionInfo"/>
+  <xs:element name="getOrder" type="tns:getOrder"/>
+  <xs:element name="getOrderResponse" type="tns:getOrderResponse"/>
+  <xs:complexType name="getOrder">
+    <xs:sequence>
+      <xs:element name="orderId" type="xs:long" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getOrderResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:order" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="order">
+    <xs:sequence>
+      <xs:element name="address" type="xs:string" minOccurs="0"/>
+      <xs:element name="creationDate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="customerId" type="xs:string" minOccurs="0"/>
+      <xs:element name="orderId" type="xs:long" minOccurs="0"/>
+      <xs:element name="orderLines" type="tns:orderLine" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="zipCode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="orderLine">
+    <xs:sequence>
+      <xs:element name="amount" type="xs:long" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="price" type="xs:double" minOccurs="0"/>
+      <xs:element name="productId" type="xs:long" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="crmExceptionInfo">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:5050/CompositeApp1-sun-http-binding/BpelModule/BusinessClient.wsdl</con:url><con:content><![CDATA[<definitions name="BusinessClient" targetNamespace="http://j2ee.netbeans.org/wsdl/BpelModule/src/BusinessClient" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/BpelModule/src/BusinessClient" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype">
+  <types/>
+  <message name="BusinessClientOperationRequest">
+    <part name="customerId" type="xsd:string"/>
+    <part name="orderId" type="xsd:long"/>
+  </message>
+  <message name="BusinessClientOperationResponse">
+    <part name="isDelivered" type="xsd:boolean"/>
+    <part name="newPoints" type="xsd:int"/>
+    <part name="isLate" type="xsd:boolean"/>
+    <part name="shipmentId" type="xsd:long"/>
+  </message>
+  <message name="BusinessClientOperationFault">
+    <part name="invalidClientId" type="xsd:string"/>
+  </message>
+  <portType name="BusinessClientPortType">
+    <operation name="BusinessClientOperation">
+      <input name="input1" message="tns:BusinessClientOperationRequest"/>
+      <output name="output1" message="tns:BusinessClientOperationResponse"/>
+      <fault name="fault1" message="tns:BusinessClientOperationFault"/>
+    </operation>
+  </portType>
+  <plnk:partnerLinkType name="BusinessClient">
+    <!--A partner link type is automatically generated when a new port type is added. Partner link types are used by BPEL processes. 
+In a BPEL process, a partner link represents the interaction between the BPEL process and a partner service. Each partner link is associated with a partner link type.
+A partner link type characterizes the conversational relationship between two services. The partner link type can have one or two roles.-->
+    <plnk:role name="BusinessClientPortTypeRole" portType="tns:BusinessClientPortType"/>
+  </plnk:partnerLinkType>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:5050/CompositeApp1-sun-http-binding/BpelModule/DeliveryService.wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is JAX-WS RI 3.0.2 git-revision#91dd558.-->
+<!--Generated by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is JAX-WS RI 3.0.2 git-revision#91dd558.-->
+<definitions targetNamespace="http://rs.udc.es/delivery" name="DeliveryProviderService" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://rs.udc.es/delivery" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://rs.udc.es/delivery" schemaLocation="DeliveryService_schema1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="createShipment">
+    <part name="parameters" element="tns:createShipment"/>
+  </message>
+  <message name="createShipmentResponse">
+    <part name="parameters" element="tns:createShipmentResponse"/>
+  </message>
+  <message name="DeliveryException">
+    <part name="fault" element="tns:DeliveryException"/>
+  </message>
+  <message name="findShipment">
+    <part name="parameters" element="tns:findShipment"/>
+  </message>
+  <message name="findShipmentResponse">
+    <part name="parameters" element="tns:findShipmentResponse"/>
+  </message>
+  <message name="changeStatus">
+    <part name="parameters" element="tns:changeStatus"/>
+  </message>
+  <message name="changeStatusResponse">
+    <part name="parameters" element="tns:changeStatusResponse"/>
+  </message>
+  <portType name="DeliveryProvider">
+    <operation name="createShipment">
+      <input wsam:Action="http://rs.udc.es/delivery/DeliveryProvider/createShipmentRequest" message="tns:createShipment"/>
+      <output wsam:Action="http://rs.udc.es/delivery/DeliveryProvider/createShipmentResponse" message="tns:createShipmentResponse"/>
+      <fault message="tns:DeliveryException" name="DeliveryException" wsam:Action="http://rs.udc.es/delivery/DeliveryProvider/createShipment/Fault/DeliveryException"/>
+    </operation>
+    <operation name="findShipment">
+      <input wsam:Action="http://rs.udc.es/delivery/DeliveryProvider/findShipmentRequest" message="tns:findShipment"/>
+      <output wsam:Action="http://rs.udc.es/delivery/DeliveryProvider/findShipmentResponse" message="tns:findShipmentResponse"/>
+      <fault message="tns:DeliveryException" name="DeliveryException" wsam:Action="http://rs.udc.es/delivery/DeliveryProvider/findShipment/Fault/DeliveryException"/>
+    </operation>
+    <operation name="changeStatus">
+      <input wsam:Action="http://rs.udc.es/delivery/DeliveryProvider/changeStatusRequest" message="tns:changeStatus"/>
+      <output wsam:Action="http://rs.udc.es/delivery/DeliveryProvider/changeStatusResponse" message="tns:changeStatusResponse"/>
+      <fault message="tns:DeliveryException" name="DeliveryException" wsam:Action="http://rs.udc.es/delivery/DeliveryProvider/changeStatus/Fault/DeliveryException"/>
+    </operation>
+  </portType>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:5050/CompositeApp1/DeliveredConfirmationStatus</con:endpoint></con:endpoints><con:operation id="98114f66-79fe-4cc9-89ca-f7dfe9246d6e" isOneWay="false" action="" name="DeliveredConfirmationStatusOperation" bindingOperationName="DeliveredConfirmationStatusOperation" type="One-Way" inputName="input1" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f932deff-7a9a-4885-970b-42b10b79ba0f" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5050/CompositeApp1/DeliveredConfirmationStatus</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:com="CompositeApp1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <com:DeliveredConfirmationStatusOperation>
+         <timeUsed>2</timeUsed>
+         <shipmentId>1</shipmentId>
+      </com:DeliveredConfirmationStatusOperation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="CompositeApp1/DeliveredConfirmationStatusPortType/input1"/><con:wsrmConfig version="1.2"/></con:call><con:call id="e059e104-6074-48c5-86f1-8ed6dee99461" name="Request 3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5050/CompositeApp1/DeliveredConfirmationStatus</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:com="CompositeApp1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <com:DeliveredConfirmationStatusOperation>
+         <timeUsed>3</timeUsed>
+         <shipmentId>4</shipmentId>
+      </com:DeliveredConfirmationStatusOperation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="CompositeApp1/DeliveredConfirmationStatusPortType/input1"/><con:wsrmConfig version="1.2"/></con:call><con:call id="3f6f9329-0ac9-4b11-8160-d60759dac9fb" name="Request 4"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5050/CompositeApp1/DeliveredConfirmationStatus</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:com="CompositeApp1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <com:DeliveredConfirmationStatusOperation>
+         <timeUsed>1</timeUsed>
+         <shipmentId>5</shipmentId>
+      </com:DeliveredConfirmationStatusOperation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="CompositeApp1/DeliveredConfirmationStatusPortType/input1"/><con:wsrmConfig version="1.2"/></con:call><con:call id="b345732b-3a3a-4ea9-9ef8-d4eceae7d6ae" name="Request 5"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5050/CompositeApp1/DeliveredConfirmationStatus</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:com="CompositeApp1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <com:DeliveredConfirmationStatusOperation>
+         <timeUsed>2</timeUsed>
+         <shipmentId>4</shipmentId>
+      </com:DeliveredConfirmationStatusOperation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="CompositeApp1/DeliveredConfirmationStatusPortType/input1"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
