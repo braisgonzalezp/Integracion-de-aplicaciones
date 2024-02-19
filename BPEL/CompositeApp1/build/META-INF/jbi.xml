@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns1="http://enterprise.netbeans.org/bpel/BpelModule/bpelModule" xmlns:ns2="CompositeApp1" xmlns:ns3="http://j2ee.netbeans.org/wsdl/BpelModule/src/BusinessClient" xmlns:ns4="http://j2ee.netbeans.org/wsdl/BpelModule/src/ShipmentConfirmClient" xmlns:ns5="http://j2ee.netbeans.org/wsdl/BpelModule/src/DeliveredConfirmationStatus" xmlns:ns6="http://rs.udc.es/delivery" xmlns:ns7="http://rs.udc.es/crm" xmlns:ns8="http://rs.udc.es/reward" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/jbi ./jbi.xsd">
+    <service-assembly>
+        <identification>
+            <name>CompositeApp1</name>
+            <description>Represents the Service Assembly of CompositeApp1</description>
+        </identification>
+        <service-unit>
+            <identification>
+                <name>CompositeApp1-BpelModule</name>
+                <description>Represents this Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>BpelModule.jar</artifacts-zip>
+                <component-name>sun-bpel-engine</component-name>
+            </target>
+        </service-unit>
+        <service-unit>
+            <identification>
+                <name>CompositeApp1-sun-http-binding</name>
+                <description>Represents this Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>sun-http-binding.jar</artifacts-zip>
+                <component-name>sun-http-binding</component-name>
+            </target>
+        </service-unit>
+        <connections>
+            <connection>
+                <consumer endpoint-name="DeliveryProviderRole_partnerRole" service-name="ns1:PartnerDelivery"/>
+                <provider endpoint-name="DeliveryProvider" service-name="ns2:CompositeApp1Service3"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="CrmProviderRole_partnerRole" service-name="ns1:PartnerCrm"/>
+                <provider endpoint-name="CrmProvider" service-name="ns2:CompositeApp1Service1"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="DeliveredConfirmation" service-name="ns2:CompositeApp1Service6"/>
+                <provider endpoint-name="DeliveredConfirmationStatusPortTypeRole_myRole" service-name="ns1:PartnerLinkDeliveredConfirmation"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="ShipmentConfirm" service-name="ns2:CompositeApp1Service5"/>
+                <provider endpoint-name="ShipmentConfirmClientPortTypeRole_myRole" service-name="ns1:PartnerLinkShipmentConfirm"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="BusinessClient" service-name="ns2:CompositeApp1Service4"/>
+                <provider endpoint-name="BusinessClientPortTypeRole_myRole" service-name="ns1:PartnerLinkBusinessClient"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="RewardProviderRole_partnerRole" service-name="ns1:PartnerReward"/>
+                <provider endpoint-name="RewardProvider" service-name="ns2:CompositeApp1Service2"/>
+            </connection>
+        </connections>
+        <route-types xmlns="http://www.open-esb.net/xml/ns/jbi">
+            <source endpoint-name="DeliveryProviderRole_partnerRole" mode="local" routing-rule="default" service-name="ns1:PartnerDelivery">direct</source>
+            <source endpoint-name="CrmProviderRole_partnerRole" mode="local" routing-rule="default" service-name="ns1:PartnerCrm">direct</source>
+            <source endpoint-name="DeliveredConfirmation" mode="local" routing-rule="default" service-name="ns2:CompositeApp1Service6">direct</source>
+            <source endpoint-name="ShipmentConfirm" mode="local" routing-rule="default" service-name="ns2:CompositeApp1Service5">direct</source>
+            <source endpoint-name="BusinessClient" mode="local" routing-rule="default" service-name="ns2:CompositeApp1Service4">direct</source>
+            <source endpoint-name="RewardProviderRole_partnerRole" mode="local" routing-rule="default" service-name="ns1:PartnerReward">direct</source>
+        </route-types>
+        <interface-mapping xmlns="http://www.open-esb.net/xml/ns/jbi">
+            <implementation>
+                <by-provider endpoint-name="BusinessClientPortTypeRole_myRole" service-name="ns1:PartnerLinkBusinessClient"/>
+                <interface name="ns3:BusinessClientPortType"/>
+            </implementation>
+            <implementation>
+                <by-provider endpoint-name="ShipmentConfirmClientPortTypeRole_myRole" service-name="ns1:PartnerLinkShipmentConfirm"/>
+                <interface name="ns4:ShipmentConfirmClientPortType"/>
+            </implementation>
+            <implementation>
+                <by-provider endpoint-name="DeliveredConfirmationStatusPortTypeRole_myRole" service-name="ns1:PartnerLinkDeliveredConfirmation"/>
+                <interface name="ns5:DeliveredConfirmationStatusPortType"/>
+            </implementation>
+            <implementation>
+                <by-provider endpoint-name="DeliveryProvider" service-name="ns2:CompositeApp1Service3"/>
+                <interface name="ns6:DeliveryProvider"/>
+            </implementation>
+            <implementation>
+                <by-provider endpoint-name="CrmProvider" service-name="ns2:CompositeApp1Service1"/>
+                <interface name="ns7:CrmProvider"/>
+            </implementation>
+            <implementation>
+                <by-provider endpoint-name="RewardProvider" service-name="ns2:CompositeApp1Service2"/>
+                <interface name="ns8:RewardProvider"/>
+            </implementation>
+        </interface-mapping>
+    </service-assembly>
+</jbi>

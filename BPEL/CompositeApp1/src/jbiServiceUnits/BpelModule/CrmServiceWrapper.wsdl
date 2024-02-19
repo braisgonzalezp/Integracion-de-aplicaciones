@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CrmServiceWrapper" targetNamespace="http://enterprise.netbeans.org/bpel/CrmServiceWrapper" xmlns:tns="http://enterprise.netbeans.org/bpel/CrmServiceWrapper" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:ns="http://rs.udc.es/crm">
+    <import location="CrmService.wsdl" namespace="http://rs.udc.es/crm"/>
+    <plnk:partnerLinkType name="CrmProviderLinkType">
+        <plnk:role name="CrmProviderRole" portType="ns:CrmProvider"/>
+    </plnk:partnerLinkType>
+</definitions>

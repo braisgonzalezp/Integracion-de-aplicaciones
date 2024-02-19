@@ -1,0 +1,4 @@
+Bundle-Name: CompositeApp1
+Bundle-SymbolicName: CompositeApp1
+Bundle-ManifestVersion: 2
+Bundle-Version: 1.0.0

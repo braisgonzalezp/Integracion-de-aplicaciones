@@ -1,0 +1,40 @@
+<!--  Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is JAX-WS RI 3.0.2 git-revision#91dd558.  -->
+<xs:schema xmlns:tns="http://rs.udc.es/crm" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://rs.udc.es/crm">
+<xs:element name="CrmException" nillable="true" type="tns:crmExceptionInfo"/>
+<xs:element name="getOrder" type="tns:getOrder"/>
+<xs:element name="getOrderResponse" type="tns:getOrderResponse"/>
+<xs:complexType name="getOrder">
+<xs:sequence>
+<xs:element name="orderId" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getOrderResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:order" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="order">
+<xs:sequence>
+<xs:element name="address" type="xs:string" minOccurs="0"/>
+<xs:element name="creationDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="customerId" type="xs:string" minOccurs="0"/>
+<xs:element name="orderId" type="xs:long" minOccurs="0"/>
+<xs:element name="orderLines" type="tns:orderLine" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="zipCode" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="orderLine">
+<xs:sequence>
+<xs:element name="amount" type="xs:long" minOccurs="0"/>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="price" type="xs:double" minOccurs="0"/>
+<xs:element name="productId" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="crmExceptionInfo">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

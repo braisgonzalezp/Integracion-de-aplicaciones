@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WizardCorrelationProperties.wsdl" targetNamespace="http://enterprise.netbeans.org/bpel/WizardCorrelationProperties" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:ns="http://j2ee.netbeans.org/wsdl/BpelModule/src/BusinessClient" xmlns:ns1="http://j2ee.netbeans.org/wsdl/BpelModule/src/ShipmentConfirmClient" xmlns:ns2="http://j2ee.netbeans.org/wsdl/BpelModule/src/DeliveredConfirmationStatus" xmlns:ns3="http://rs.udc.es/delivery" xmlns:tns="http://enterprise.netbeans.org/bpel/WizardCorrelationProperties">
+    <import namespace="http://j2ee.netbeans.org/wsdl/BpelModule/src/BusinessClient" location="BusinessClient.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/BpelModule/src/ShipmentConfirmClient" location="ShipmentConfirmClient.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/BpelModule/src/DeliveredConfirmationStatus" location="DeliveredConfirmationStatus.wsdl"/>
+    <import namespace="http://rs.udc.es/delivery" location="DeliveryService.wsdl"/>
+    <types>
+        <xsd:schema targetNamespace="http://enterprise.netbeans.org/bpel/WizardCorrelationProperties">
+            <xsd:import namespace="http://rs.udc.es/delivery" schemaLocation="DeliveryService_schema1.xsd"/>
+        </xsd:schema>
+    </types>
+    <vprop:property name="wzrd_prop_long_long" type="xsd:long"/>
+    <vprop:property name="wzrd_prop_shipmentId_long" type="xsd:long"/>
+    <vprop:propertyAlias propertyName="tns:wzrd_prop_shipmentId_long" messageType="ns3:createShipmentResponse" part="parameters">
+        <vprop:query>/ns3:createShipmentResponse/return/shipmentId</vprop:query>
+    </vprop:propertyAlias>
+    <vprop:propertyAlias propertyName="tns:wzrd_prop_shipmentId_long" messageType="ns1:ShipmentConfirmClientOperationRequest" part="shipmentId"/>
+    <vprop:propertyAlias propertyName="tns:wzrd_prop_long_long" messageType="ns1:ShipmentConfirmClientOperationRequest" part="shipmentId"/>
+    <vprop:propertyAlias propertyName="tns:wzrd_prop_long_long" messageType="ns2:DeliveredConfirmationStatusOperationRequest" part="shipmentId"/>
+</definitions>
